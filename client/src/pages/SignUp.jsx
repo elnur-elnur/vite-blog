@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Input from "../components/ui/Input";
 import Button from "../components/ui/Button";
 
 export default function SignUp() {
+  const [formData, setFormData] = useState({});
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="min-h-screen mt-20">
       <div className="flex p-3 max-w-3xl flex-col mx-auto md:flex-row md:items-center gap-5">
@@ -24,7 +34,7 @@ export default function SignUp() {
           </p>
         </div>
         <div className="flex-1">
-          <form className="flex flex-col gap-3">
+          <form className="flex flex-col gap-3" onSubmit={handleFormSubmit}>
             <label htmlFor="username">
               <p>Your username</p>
               <Input
@@ -32,6 +42,7 @@ export default function SignUp() {
                 placeholder="Username"
                 id="username"
                 className="w-full"
+                onChange={handleChange}
               />
             </label>
             <label htmlFor="email">
@@ -41,6 +52,7 @@ export default function SignUp() {
                 placeholder="name@company.com"
                 id="email"
                 className="w-full"
+                onChange={handleChange}
               />
             </label>
             <label htmlFor="password">
@@ -51,6 +63,7 @@ export default function SignUp() {
                 placeholder="Password"
                 id="password"
                 autoComplete="on"
+                onChange={handleChange}
               />
             </label>
 

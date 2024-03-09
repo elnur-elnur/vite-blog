@@ -55,6 +55,7 @@ export default function TheHeader() {
             sign in
           </Button>
         </Link>
+
         <div className="lg:hidden">
           <div
             onClick={toggleCollapseMethod}
