@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaMoon } from "react-icons/fa";
-import Button from "../ui/Button";
 import { IoMdMenu } from "react-icons/io";
-import Input from "../ui/Input";
+import Input from "../../ui/Input";
+import Button from "../../ui/Button";
 
 export default function TheHeader() {
   const [isCollapse, setIsCollapse] = useState(false);

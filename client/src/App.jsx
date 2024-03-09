@@ -7,7 +7,8 @@ import SignIn from "./pages/SignIn";
 import Projects from "./pages/Projects";
 import Dashboard from "./pages/Dashboard";
 
-import TheHeader from "./components/header/TheHeader";
+import TheHeader from "./components/layout/header/TheHeader";
+import Footer from "./components/layout/footer/Footer";
 
 export default function App() {
   return (
@@ -22,6 +23,8 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
+
+      <Footer />
     </BrowserRouter>
   );
 }
