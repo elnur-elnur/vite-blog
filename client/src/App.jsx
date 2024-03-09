@@ -7,9 +7,13 @@ import SignIn from "./pages/SignIn";
 import Projects from "./pages/Projects";
 import Dashboard from "./pages/Dashboard";
 
+import TheHeader from "./components/header/TheHeader";
+
 export default function App() {
   return (
     <BrowserRouter>
+      <TheHeader />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
